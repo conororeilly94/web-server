@@ -30,8 +30,8 @@ def write_to_csv(data):
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
     if request.method == 'POST':
-    	data = request.form.to_dict()
-    	write_to_csv(data)
-    	return redirect('/thankyou.html')
+	    	data = request.form.to_dict()
+	    	write_to_csv(data)
+	    	return redirect('/thankyou.html')
     else:
     	return 'Try again'    
